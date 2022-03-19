@@ -32,13 +32,13 @@ public class Users {
     @JsonIgnore
     private String password;
 
-    @OneToMany(mappedBy = "user_address")
+    @OneToMany(mappedBy = "users")
     private List<Address> addresses;
 
-    @OneToMany(mappedBy = "user_favorites")
+    @OneToMany(mappedBy = "users")
     private List<Favorites> favorites;
 
-    @OneToMany(mappedBy = "user_cart")
+    @OneToMany(mappedBy = "users")
     private List<Carts> carts;
 
     public Users() {

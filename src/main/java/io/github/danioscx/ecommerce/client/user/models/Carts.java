@@ -18,6 +18,9 @@ public class Carts {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "users_id")
+    private Users users;
 
     public Carts() {
 
