@@ -1,4 +1,4 @@
-package io.github.danioscx.ecommerce.client.user.models;
+package io.github.danioscx.ecommerce.client.member.models;
 
 
 import lombok.Builder;
@@ -20,7 +20,7 @@ public class Address {
 
     @ManyToOne
     @JoinColumn(name = "users_id")
-    private Users users;
+    private Members members;
 
 
     public Address() {

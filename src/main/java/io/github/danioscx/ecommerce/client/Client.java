@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class Client {
 
     @RestController
-    public static class User {
+    @RequestMapping("api/v1/member")
+    public static class Member {
 
         @RequestMapping({"/hi"})
         public String hi() {

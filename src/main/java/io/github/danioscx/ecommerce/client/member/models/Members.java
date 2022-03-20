@@ -1,4 +1,4 @@
-package io.github.danioscx.ecommerce.client.user.models;
+package io.github.danioscx.ecommerce.client.member.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
@@ -12,8 +12,8 @@ import java.util.List;
 @Getter
 @Builder
 @Entity
-@Table(name = "users")
-public class Users {
+@Table(name = "members")
+public class Members {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,16 +32,16 @@ public class Users {
     @JsonIgnore
     private String password;
 
-    @OneToMany(mappedBy = "users")
+    @OneToMany(mappedBy = "members")
     private List<Address> addresses;
 
-    @OneToMany(mappedBy = "users")
+    @OneToMany(mappedBy = "members")
     private List<Favorites> favorites;
 
-    @OneToMany(mappedBy = "users")
+    @OneToMany(mappedBy = "members")
     private List<Carts> carts;
 
-    public Users() {
+    public Members() {
 
     }
 }

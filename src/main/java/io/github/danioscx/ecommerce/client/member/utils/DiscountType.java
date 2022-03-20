@@ -1,4 +1,4 @@
-package io.github.danioscx.ecommerce.client.user.utils;
+package io.github.danioscx.ecommerce.client.member.utils;
 
 public enum DiscountType {
     PERCENT("percent"),

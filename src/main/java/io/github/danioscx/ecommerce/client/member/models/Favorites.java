@@ -1,4 +1,4 @@
-package io.github.danioscx.ecommerce.client.user.models;
+package io.github.danioscx.ecommerce.client.member.models;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -6,13 +6,12 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-
 @Setter
 @Getter
 @Builder
 @Entity
-@Table(name = "carts")
-public class Carts {
+@Table(name = "favorites")
+public class Favorites {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,9 +19,13 @@ public class Carts {
 
     @ManyToOne
     @JoinColumn(name = "users_id")
-    private Users users;
+    private Members members;
 
-    public Carts() {
+    @OneToOne
+    @JoinColumn(name = "products_id")
+    private Products products;
+
+    public Favorites() {
 
     }
 }

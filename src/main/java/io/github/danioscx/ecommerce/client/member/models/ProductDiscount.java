@@ -1,6 +1,6 @@
-package io.github.danioscx.ecommerce.client.user.models;
+package io.github.danioscx.ecommerce.client.member.models;
 
-import io.github.danioscx.ecommerce.client.user.utils.DiscountType;
+import io.github.danioscx.ecommerce.client.member.utils.DiscountType;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +22,7 @@ public class ProductDiscount {
     @Column(nullable = false)
     private Timestamp availableAt;
 
-    @Column(nullable = false, columnDefinition = "default 'percent'")
+    @Column(nullable = false, columnDefinition = "varchar(20) default 'percent'")
     @Enumerated(value = EnumType.STRING)
     private DiscountType discountType = DiscountType.PERCENT;
 

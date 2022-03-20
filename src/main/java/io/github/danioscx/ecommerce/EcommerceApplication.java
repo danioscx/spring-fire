@@ -15,7 +15,7 @@ public class EcommerceApplication {
         FirebaseOptions options = FirebaseOptions.builder()
                 .setCredentials(GoogleCredentials.getApplicationDefault())
                 .build();
-		FirebaseApp.initializeApp(options);
+        FirebaseApp.initializeApp(options);
         SpringApplication.run(EcommerceApplication.class, args);
     }
 

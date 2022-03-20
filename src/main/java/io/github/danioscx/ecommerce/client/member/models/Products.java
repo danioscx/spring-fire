@@ -1,4 +1,4 @@
-package io.github.danioscx.ecommerce.client.user.models;
+package io.github.danioscx.ecommerce.client.member.models;
 
 import io.github.danioscx.ecommerce.client.merchant.models.Merchants;
 import lombok.Builder;
